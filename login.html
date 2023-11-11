@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>radio button</title>
+        <style>
+        Body {
+            font-family: Calibri, Helvetica, sans-serif;
+          }
+          button { 
+                  
+                 width: 100%;
+                  color: black; 
+                  padding: 15px; 
+                  margin: 10px 0px; 
+                  border: black; 
+                  cursor: pointer; 
+                   } 
+           form { 
+                  border: 3px solid blue; 
+                
+              } 
+           input[type=text], input[type=password] { 
+                  width: 100%; 
+                  margin: 8px 0;
+                  padding: 12px 20px; 
+                  display: inline-block; 
+                  border: 2px purple; 
+                  box-sizing: border-box; 
+                  
+              }
+           button:hover { 
+                  opacity: 0.7; 
+              } 
+            .cancelbtn { 
+                  width: auto; 
+                  padding: 10px 18px;
+                  margin: 10px 5px;
+              } 
+                
+             
+           .container { 
+                  padding: 25px; 
+                  
+              } 
+          </style> 
+        <script>
+            function myvalidate(form){
+                var userName=form.username.value;
+                var password=form.password.value;
+                if(userName.length===0){
+                    alert("please enter valid username");
+                    return false;
+                }
+                if(password.length===0){
+                    alert("please enter valid password");
+                    return false;
+                }
+                if( password.length<6){
+                    alert("please enter valid password");
+                    return false;
+                }
+                if(userName.length<8){
+                    alert("please enter valid password");
+                    return false;
+                }
+                
+                return true;
+            }
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Login form</h1>
+        <form action="#" onsubmit="return myvalidate(this);">
+            <div class="container"> 
+                <label>Username : </label> 
+                <input type="text" placeholder="Enter Username" name="username" 
+                <label>Password : </label> 
+                <input type="password" placeholder="Enter Password" name="password" >
+                <button type="submit">Login</button> 
+              
+               <center>Not a Member?
+    <a href="signup.html">Sign up</a>
+                
+            </div> 
+        </form>
+    </body>
+</html>
